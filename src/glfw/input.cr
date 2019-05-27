@@ -1,10 +1,8 @@
 @[Link("glfw3")]
 lib LibGLFW
-  # typedef struct GLFWcursor GLFWcursor
+  type Cursor = Void*
 
-  # typedef struct GLFWgamepadstate
-
-  alias MouseButtonProc = Window, Int32, Action, Int32 -> Void
+  alias MouseButtonProc = Window, MouseButton, Action, ModifierKey -> Void
 
   alias CursorPosProc = Window, Float64, Float64 -> Void
 
@@ -12,29 +10,29 @@ lib LibGLFW
 
   alias ScrollProc = Window, Float64, Float64 -> Void
 
-  alias KeyProc = Window, Int32, Int32, Action, Int32 -> Void
+  alias KeyProc = Window, KeyboardKey, Int32, Action, ModifierKey -> Void
 
   alias CharProc = Window, UInt32 -> Void
 
-  alias CharModsProc = Window, UInt32, Int32 -> Void
+  alias CharModsProc = Window, UInt32, ModifierKey -> Void
 
   alias DropProc = Window, Int32, UInt8** -> Void
 
-  alias JoystickProc = Int32, Int32 -> Void
+  alias JoystickProc = Int32, DeviceEvent -> Void
 
-  fun get_input_mode = glfwGetInputMode(window : Window, mode : InputMode) : Int32
+  fun get_input_mode = glfwGetInputMode(window : Window, mode : InputMode) : Bool | CursorMode
 
-  fun set_input_mode = glfwSetInputMode(window : Window, mode : InputMode, value : Int32) : Void
+  fun set_input_mode = glfwSetInputMode(window : Window, mode : InputMode, value : Bool | CursorMode) : Void
 
   fun raw_mouse_motion_supported = glfwRawMouseMotionSupported : Bool
 
-  fun get_key_name = glfwGetKeyName(key : Int32, scancode : Int32) : UInt8*
+  fun get_key_name = glfwGetKeyName(key : KeyboardKey, scancode : Int32) : UInt8*
 
-  fun get_key_scancode = glfwGetKeyScancode(key : Int32) : Int32
+  fun get_key_scancode = glfwGetKeyScancode(key : KeyboardKey) : Int32
 
-  fun get_key = glfwGetKey(window : Window, key : Int32) : Int32
+  fun get_key = glfwGetKey(window : Window, key : KeyboardKey) : Action
 
-  fun get_mouse_button = glfwGetMouseButton(window : Window, button : Int32) : Int32
+  fun get_mouse_button = glfwGetMouseButton(window : Window, button : MouseButton) : Action
 
   fun get_cursor_pos = glfwGetCursorPos(window : Window, xpos : Float64*, ypos : Float64*) : Void
 
@@ -42,7 +40,7 @@ lib LibGLFW
 
   fun create_cursor = glfwCreateCursor(image : Image, xhot : Int32, yhot : Int32) : Cursor
 
-  fun create_standard_cursor = glfwCreateStandardCursor(share : Int32) : Cursor
+  fun create_standard_cursor = glfwCreateStandardCursor(shape : StandardCursorShape) : Cursor
 
   fun destroy_cursor = glfwDestroyCursor(cursor : Cursor) : Void
 
@@ -64,31 +62,31 @@ lib LibGLFW
 
   fun set_drop_callback = glfwSetDropCallback(window : Window, callback : DropProc?) : DropProc?
 
-  fun joystick_present = glfwJoystickPresent(jid : Int32) : Int32
+  fun joystick_present = glfwJoystickPresent(jid : Joystick) : Bool
 
-  fun get_joystick_axes = glfwGetJoystickAxes(jid : Int32, count : Int32*) : Float32*
+  fun get_joystick_axes = glfwGetJoystickAxes(jid : Joystick, count : Int32*) : Float32*
 
-  fun get_joystick_buttons = glfwGetJoystickButtons(jid : Int32, count : Int32*) : UInt8*
+  fun get_joystick_buttons = glfwGetJoystickButtons(jid : Joystick, count : Int32*) : UInt8*
 
-  fun get_joystick_hats = glfwGetJoystickHats(jid : Int32, count : Int32*) : UInt8*
+  fun get_joystick_hats = glfwGetJoystickHats(jid : Joystick, count : Int32*) : UInt8*
 
-  fun get_joystick_name = glfwGetJoystickName(jid : Int32) : UInt8*
+  fun get_joystick_name = glfwGetJoystickName(jid : Joystick) : UInt8*
 
-  fun get_joystick_guid = glfwGetJoystickGUID(jid : Int32) : UInt8*
+  fun get_joystick_guid = glfwGetJoystickGUID(jid : Joystick) : UInt8*
 
-  fun set_joystick_user_pointer = glfwSetJoystickUserPointer(jid : Int32, pointer : Void*) : Void
+  fun set_joystick_user_pointer = glfwSetJoystickUserPointer(jid : Joystick, pointer : Void*) : Void
 
-  fun get_joystick_user_pointer = glfwGetJoystickUserPointer(jid : Int32) : Void*
+  fun get_joystick_user_pointer = glfwGetJoystickUserPointer(jid : Joystick) : Void*
 
-  fun joystick_is_gamepad = glfwJoystickIsGamepad(jid : Int32) : Int32
+  fun joystick_is_gamepad = glfwJoystickIsGamepad(jid : Joystick) : Bool
 
   fun set_joystick_callback = glfwSetJoystickCallback(callback : JoystickProc?) : JoystickProc?
 
-  fun update_gamepad_mappings = glfwUpdateGamepadMappings(string : UInt8*) : Int32
+  fun update_gamepad_mappings = glfwUpdateGamepadMappings(string : UInt8*) : Bool
 
-  fun get_gamepad_name = glfwGetGamepadName(jid : Int32) : UInt8*
+  fun get_gamepad_name = glfwGetGamepadName(jid : Joystick) : UInt8*
 
-  fun get_gamepad_state = glfwGetGamepadState(jid : Int32, state : GamepadState*) : Int32
+  fun get_gamepad_state = glfwGetGamepadState(jid : Joystick, state : GamepadState*) : Bool
 
   fun set_clipboard_string = glfwSetClipboardString(window : Window, string : UInt8*) : Void
 

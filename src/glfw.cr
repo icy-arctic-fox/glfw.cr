@@ -2,7 +2,9 @@ require "./glfw/**"
 
 @[Link("glfw3")]
 lib LibGLFW
-  VERSION = "3.4.0"
+  VERSION = "3.3.0"
+
+  DONT_CARE = -1
 
   VERSION_MAJOR = 3
 

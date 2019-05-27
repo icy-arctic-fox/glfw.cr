@@ -1,6 +1,6 @@
 @[Link("glfw3")]
 lib LibGLFW
-  enum GamepadAxes : Int32
+  enum GamepadAxis : Int32
     LeftX        = 0
     LeftY        = 1
     RightX       = 2
