@@ -1,0 +1,13 @@
+name: glfw.cr
+version: 3.3.0
+description: Raw GLFW bindings
+
+authors:
+  - Michael Miller <icy.arctic.fox@gmail.com>
+
+crystal: 0.28.0
+
+libraries:
+  glfw: ~> 3.4
+
+license: zlib
