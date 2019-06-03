@@ -8,6 +8,6 @@ authors:
 crystal: 0.28.0
 
 libraries:
-  glfw: ~> 3.3
+  glfw3: ~> 3.3
 
 license: zlib
