@@ -1,4 +1,4 @@
-name: glfw.cr
+name: glfw
 version: 3.3.0
 description: Raw GLFW bindings
 
