@@ -45,21 +45,21 @@ lib LibGLFW
 
   fun set_cursor = glfwSetCursor(window : Window, cursor : Cursor) : Void
 
-  fun set_key_callback = glfwSetKeyCallback(window : Window, callback : KeyProc?) : KeyProc?
+  fun set_key_callback = glfwSetKeyCallback(window : Window, callback : KeyProc) : KeyProc
 
-  fun set_char_callback = glfwSetCharCallback(window : Window, callback : CharProc?) : CharProc?
+  fun set_char_callback = glfwSetCharCallback(window : Window, callback : CharProc) : CharProc
 
-  fun set_char_mods_callback = glfwSetCharModsCallback(window : Window, callback : CharModsProc?) : CharModsProc?
+  fun set_char_mods_callback = glfwSetCharModsCallback(window : Window, callback : CharModsProc) : CharModsProc
 
-  fun set_mouse_button_callback = glfwSetMouseButtonCallback(window : Window, callback : MouseButtonProc?) : MouseButtonProc?
+  fun set_mouse_button_callback = glfwSetMouseButtonCallback(window : Window, callback : MouseButtonProc) : MouseButtonProc
 
-  fun set_cursor_pos_callback = glfwSetCursorPosCallback(window : Window, callback : CursorPosProc?) : CursorPosProc?
+  fun set_cursor_pos_callback = glfwSetCursorPosCallback(window : Window, callback : CursorPosProc) : CursorPosProc
 
-  fun set_cursor_enter_callback = glfwSetCursorEnterCallback(window : Window, callback : CursorEnterProc?) : CursorEnterProc?
+  fun set_cursor_enter_callback = glfwSetCursorEnterCallback(window : Window, callback : CursorEnterProc) : CursorEnterProc
 
-  fun set_scroll_callback = glfwSetScrollCallback(window : Window, callback : ScrollProc?) : ScrollProc?
+  fun set_scroll_callback = glfwSetScrollCallback(window : Window, callback : ScrollProc) : ScrollProc
 
-  fun set_drop_callback = glfwSetDropCallback(window : Window, callback : DropProc?) : DropProc?
+  fun set_drop_callback = glfwSetDropCallback(window : Window, callback : DropProc) : DropProc
 
   fun joystick_present = glfwJoystickPresent(jid : Joystick) : Bool
 
@@ -79,7 +79,7 @@ lib LibGLFW
 
   fun joystick_is_gamepad = glfwJoystickIsGamepad(jid : Joystick) : Bool
 
-  fun set_joystick_callback = glfwSetJoystickCallback(callback : JoystickProc?) : JoystickProc?
+  fun set_joystick_callback = glfwSetJoystickCallback(callback : JoystickProc) : JoystickProc
 
   fun update_gamepad_mappings = glfwUpdateGamepadMappings(string : UInt8*) : Bool
 

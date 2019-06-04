@@ -13,5 +13,5 @@ lib LibGLFW
 
   fun get_error = glfwGetError(description : UInt8**) : ErrorCode
 
-  fun set_error_callback = glfwSetErrorCallback(cbproc : ErrorProc?) : ErrorProc?
+  fun set_error_callback = glfwSetErrorCallback(cbproc : ErrorProc) : ErrorProc
 end

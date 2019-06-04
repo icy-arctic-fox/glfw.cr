@@ -85,23 +85,23 @@ lib LibGLFW
 
   fun get_window_user_pointer = glfwGetWindowUserPointer(window : Window) : Void*
 
-  fun set_window_pos_callback = glfwSetWindowPosCallback(window : Window, callback : WindowPosProc?) : WindowPosProc?
+  fun set_window_pos_callback = glfwSetWindowPosCallback(window : Window, callback : WindowPosProc) : WindowPosProc
 
-  fun set_window_size_callback = glfwSetWindowSizeCallback(window : Window, callback : WindowSizeProc?) : WindowSizeProc?
+  fun set_window_size_callback = glfwSetWindowSizeCallback(window : Window, callback : WindowSizeProc) : WindowSizeProc
 
-  fun set_window_close_callback = glfwSetWindowCloseCallback(window : Window, callback : WindowCloseProc?) : WindowCloseProc?
+  fun set_window_close_callback = glfwSetWindowCloseCallback(window : Window, callback : WindowCloseProc) : WindowCloseProc
 
-  fun set_window_refresh_callback = glfwSetWindowRefreshCallback(window : Window, callback : WindowRefreshProc?) : WindowRefreshProc?
+  fun set_window_refresh_callback = glfwSetWindowRefreshCallback(window : Window, callback : WindowRefreshProc) : WindowRefreshProc
 
-  fun set_window_focus_callback = glfwSetWindowFocusCallback(window : Window, callback : WindowFocusProc?) : WindowFocusProc?
+  fun set_window_focus_callback = glfwSetWindowFocusCallback(window : Window, callback : WindowFocusProc) : WindowFocusProc
 
-  fun set_window_iconify_callback = glfwSetWindowIconifyCallback(window : Window, callback : WindowIconifyProc?) : WindowIconifyProc?
+  fun set_window_iconify_callback = glfwSetWindowIconifyCallback(window : Window, callback : WindowIconifyProc) : WindowIconifyProc
 
-  fun set_window_maximize_callback = glfwSetWindowMaximizeCallback(window : Window, callback : WindowMaximizeProc?) : WindowMaximizeProc?
+  fun set_window_maximize_callback = glfwSetWindowMaximizeCallback(window : Window, callback : WindowMaximizeProc) : WindowMaximizeProc
 
-  fun set_framebuffer_size_callback = glfwSetFramebufferSizeCallback(window : Window, callback : FrameBufferSizeProc?) : FrameBufferSizeProc?
+  fun set_framebuffer_size_callback = glfwSetFramebufferSizeCallback(window : Window, callback : FrameBufferSizeProc) : FrameBufferSizeProc
 
-  fun set_window_content_scale_callback = glfwSetWindowContentScaleCallback(window : Window, callback : WindowContentScaleProc?) : WindowContentScaleProc?
+  fun set_window_content_scale_callback = glfwSetWindowContentScaleCallback(window : Window, callback : WindowContentScaleProc) : WindowContentScaleProc
 
   fun poll_events = glfwPollEvents : Void
 

@@ -21,7 +21,7 @@ lib LibGLFW
 
   fun get_monitor_user_pointer = glfwGetMonitorUserPointer(monitor : Monitor) : Void*
 
-  fun set_monitor_callback = glfwSetMonitorCallback(callback : MonitorProc?) : MonitorProc?
+  fun set_monitor_callback = glfwSetMonitorCallback(callback : MonitorProc) : MonitorProc
 
   fun get_video_modes = glfwGetVideoModes(monitor : Monitor, count : Int32*) : VideoMode*
 
