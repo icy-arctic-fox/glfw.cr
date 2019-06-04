@@ -20,6 +20,5 @@ lib LibGLFW
     Second = Joy2
     Third  = Joy3
     Fourth = Joy4
-    Last   = Joy16
   end
 end
