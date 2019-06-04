@@ -14,7 +14,7 @@ lib LibGLFW
 
   fun get_monitor_physical_size = glfwGetMonitorPhysicalSize(monitor : Monitor, width_mm : Int32*, height_mm : Int32*) : Void
 
-  fun get_monitor_content_scale = glfwGetMonitorContentScale(monitor : Monitor, xscale : Float*, yscale : Float*) : Void
+  fun get_monitor_content_scale = glfwGetMonitorContentScale(monitor : Monitor, xscale : Float32*, yscale : Float32*) : Void
 
   fun get_monitor_name = glfwGetMonitorName(monitor : Monitor) : UInt8*
 

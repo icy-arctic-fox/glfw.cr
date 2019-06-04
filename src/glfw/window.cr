@@ -22,7 +22,7 @@ lib LibGLFW
 
   fun default_window_hints = glfwDefaultWindowHints : Void
 
-  fun window_hint = glfwWindowHint(hint : WindowHint, value : Bool | ClientAPI | ContextCreationAPI | OpenGLProfile | ContextRobustness | ReleaseBehavior | Int32) : Void
+  fun window_hint = glfwWindowHint(hint : WindowHint, value : Int32) : Void
 
   fun window_hint_string = glfwWindowHintString(hint : WindowHint, value : UInt8*) : Void
 
@@ -78,7 +78,7 @@ lib LibGLFW
 
   fun set_window_monitor = glfwSetWindowMonitor(window : Window, monitor : Monitor, xpos : Int32, ypos : Int32, width : Int32, height : Int32, refresh_rate : Int32) : Void
 
-  fun get_window_attrib = glfwGetWindowAttrib(window : Window, attrib : WindowAttribute) : Bool | ClientAPI | ContextCreationAPI | OpenGLProfile | ContextRobustness | Int32
+  fun get_window_attrib = glfwGetWindowAttrib(window : Window, attrib : WindowAttribute) : Int32
 
   fun set_window_attrib = glfwSetWindowAttrib(window : Window, attrib : WindowAttribute, value : Bool) : Void
 

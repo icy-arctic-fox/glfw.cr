@@ -20,9 +20,9 @@ lib LibGLFW
 
   alias JoystickProc = Int32, DeviceEvent -> Void
 
-  fun get_input_mode = glfwGetInputMode(window : Window, mode : InputMode) : Bool | CursorMode
+  fun get_input_mode = glfwGetInputMode(window : Window, mode : InputMode) : Int32
 
-  fun set_input_mode = glfwSetInputMode(window : Window, mode : InputMode, value : Bool | CursorMode) : Void
+  fun set_input_mode = glfwSetInputMode(window : Window, mode : InputMode, value : Int32) : Void
 
   fun raw_mouse_motion_supported = glfwRawMouseMotionSupported : Bool
 
