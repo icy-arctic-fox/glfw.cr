@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   enum ContextRobustness : Int32
     LoseContextOnReset  = 0x00031002

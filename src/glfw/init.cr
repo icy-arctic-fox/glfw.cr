@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   alias ErrorProc = ErrorCode, UInt8* -> Void
 

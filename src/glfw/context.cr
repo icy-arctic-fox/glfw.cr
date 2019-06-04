@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   alias GLProc = -> Void
 

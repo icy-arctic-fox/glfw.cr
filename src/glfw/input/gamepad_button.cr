@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   enum GamepadButton : Int32
     A           =  0

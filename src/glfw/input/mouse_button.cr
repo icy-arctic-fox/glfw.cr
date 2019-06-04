@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   enum MouseButton : Int32
     Button1 = 0

@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   enum Action : Int32
     Release = 0

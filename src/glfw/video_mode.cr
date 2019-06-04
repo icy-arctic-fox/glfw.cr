@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   struct VideoMode
     width, height : Int32

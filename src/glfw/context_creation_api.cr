@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   enum ContextCreationAPI : Int32
     Native = 0x00036001

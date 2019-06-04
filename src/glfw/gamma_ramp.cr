@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   struct GammaRamp
     red, green, blue : UInt16*

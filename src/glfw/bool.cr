@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   enum Bool : Int32
     False = 0

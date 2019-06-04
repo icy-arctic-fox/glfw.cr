@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   enum CursorMode : Int32
     Normal   = 0x00034001

@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   enum Joystick : Int32
     Joy1   =  0

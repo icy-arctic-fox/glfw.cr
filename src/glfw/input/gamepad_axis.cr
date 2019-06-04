@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   enum GamepadAxis : Int32
     LeftX        = 0

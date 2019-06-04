@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   struct GamepadState
     buttons : StaticArray(UInt8, 15)

@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   type Cursor = Void*
 

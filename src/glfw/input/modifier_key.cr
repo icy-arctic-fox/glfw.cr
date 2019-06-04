@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   @[Flags]
   enum ModifierKey : Int32

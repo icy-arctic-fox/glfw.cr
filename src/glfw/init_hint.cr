@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   enum InitHint : Int32
     JoystickHatButtons = 0x00050001

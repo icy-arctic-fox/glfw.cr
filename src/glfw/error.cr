@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   enum ErrorCode : Int32
     NoError            =          0

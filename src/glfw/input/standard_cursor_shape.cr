@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   enum StandardCursorShape : Int32
     Arrow     = 0x00036001

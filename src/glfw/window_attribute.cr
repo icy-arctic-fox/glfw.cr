@@ -1,4 +1,3 @@
-@[Link("glfw3")]
 lib LibGLFW
   enum WindowAttribute : Int32
     Focused                = 0x00020001
