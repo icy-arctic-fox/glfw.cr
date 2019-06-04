@@ -1,6 +1,6 @@
 require "./glfw/**"
 
-@[Link("glfw3")]
+@[Link(ldflags: "`pkg-config glfw3 --libs --static`")]
 lib LibGLFW
   VERSION = "3.3.0"
 
