@@ -71,7 +71,7 @@ lib LibGLFW
 
   fun focus_window = glfwFocusWindow(window : Window) : Void
 
-  fun require_window_attention = glfwRequestWindowAttention(window : Window) : Void
+  fun request_window_attention = glfwRequestWindowAttention(window : Window) : Void
 
   fun get_window_monitor = glfwGetWindowMonitor(window : Window) : Monitor
 
