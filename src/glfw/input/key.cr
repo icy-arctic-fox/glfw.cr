@@ -1,5 +1,5 @@
 lib LibGLFW
-  enum KeyboardKey
+  enum Key
     Unknown        =  -1
     Space          =  32
     Apostrophe     =  39

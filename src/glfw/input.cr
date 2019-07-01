@@ -9,7 +9,7 @@ lib LibGLFW
 
   alias ScrollProc = Window, Float64, Float64 -> Void
 
-  alias KeyProc = Window, KeyboardKey, Int32, Action, ModifierKey -> Void
+  alias KeyProc = Window, Key, Int32, Action, ModifierKey -> Void
 
   alias CharProc = Window, UInt32 -> Void
 
@@ -25,11 +25,11 @@ lib LibGLFW
 
   fun raw_mouse_motion_supported = glfwRawMouseMotionSupported : Bool
 
-  fun get_key_name = glfwGetKeyName(key : KeyboardKey, scancode : Int32) : UInt8*
+  fun get_key_name = glfwGetKeyName(key : Key, scancode : Int32) : UInt8*
 
-  fun get_key_scancode = glfwGetKeyScancode(key : KeyboardKey) : Int32
+  fun get_key_scancode = glfwGetKeyScancode(key : Key) : Int32
 
-  fun get_key = glfwGetKey(window : Window, key : KeyboardKey) : Action
+  fun get_key = glfwGetKey(window : Window, key : Key) : Action
 
   fun get_mouse_button = glfwGetMouseButton(window : Window, button : MouseButton) : Action
 
