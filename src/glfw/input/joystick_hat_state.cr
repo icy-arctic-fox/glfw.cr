@@ -1,6 +1,6 @@
 lib LibGLFW
   @[Flags]
-  enum JoystickHatState : Int32
+  enum JoystickHatState : UInt8
     Centered  = 0
     Up        = 1
     Right     = 2

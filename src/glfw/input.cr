@@ -67,7 +67,7 @@ lib LibGLFW
 
   fun get_joystick_buttons = glfwGetJoystickButtons(jid : Joystick, count : Int32*) : UInt8*
 
-  fun get_joystick_hats = glfwGetJoystickHats(jid : Joystick, count : Int32*) : UInt8*
+  fun get_joystick_hats = glfwGetJoystickHats(jid : Joystick, count : Int32*) : JoystickHatState*
 
   fun get_joystick_name = glfwGetJoystickName(jid : Joystick) : UInt8*
 
