@@ -16,9 +16,5 @@ lib LibGLFW
     Joy14  = 13
     Joy15  = 14
     Joy16  = 15
-    First  = Joy1
-    Second = Joy2
-    Third  = Joy3
-    Fourth = Joy4
   end
 end
