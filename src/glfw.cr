@@ -2,7 +2,7 @@ require "./glfw/**"
 
 @[Link(ldflags: "`pkg-config glfw3 --libs --static`")]
 lib LibGLFW
-  VERSION = "3.3.0"
+  VERSION = "3.3.1"
 
   DONT_CARE = -1
 
