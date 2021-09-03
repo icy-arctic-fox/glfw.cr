@@ -1,5 +1,5 @@
 lib LibGLFW
-  alias GLProc = -> Void
+  alias GLProc = Void*
 
   fun make_context_current = glfwMakeContextCurrent(window : Window) : Void
 
