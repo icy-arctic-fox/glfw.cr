@@ -1,0 +1,28 @@
+# Official language image. Look for the different tagged releases at:
+# https://hub.docker.com/r/crystallang/crystal/
+image: "crystallang/crystal:latest"
+
+# Cache shards in between builds
+cache:
+  paths:
+    - lib
+    - bin
+
+before_script:
+  - crystal -v # Print out Crystal version for debugging
+
+spec:
+  script:
+    - shards
+    - crystal spec --error-on-warnings --junit_output=.
+  artifacts:
+    when: always
+    paths:
+      - output.xml
+    reports:
+      junit: output.xml
+
+format:
+  script:
+    - shards
+    - crystal tool format --check
