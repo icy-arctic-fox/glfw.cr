@@ -17,7 +17,7 @@ lib LibGLFW
 
   alias DropProc = Window, Int32, UInt8** -> Void
 
-  alias JoystickProc = Int32, DeviceEvent -> Void
+  alias JoystickProc = Joystick, DeviceEvent -> Void
 
   fun get_input_mode = glfwGetInputMode(window : Window, mode : InputMode) : Int32
 
